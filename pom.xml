@@ -94,6 +94,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>eccentric</finalName>
 	</build>
 
 </project>

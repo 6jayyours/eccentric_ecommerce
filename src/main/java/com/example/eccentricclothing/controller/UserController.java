@@ -208,9 +208,6 @@ public class UserController {
     public String createOrder(@RequestBody Map<String, Object> data, Principal principal) throws Exception {
 
 
-
-
-
         try {
 
             System.out.println(data);
@@ -289,9 +286,6 @@ public class UserController {
         return "redirect:/admin/userOrder";
     }
 
-
-
-
     @GetMapping("/orders")
     public String viewOrders(Model model) {
         User user = userService.getLoggedInUser();
@@ -311,7 +305,6 @@ public class UserController {
         orderService.returnOrder(orderId);
         return "redirect:/user/orders";
     }
-
 
     @GetMapping("/cart")
     public String getCart(Model model) {
@@ -341,7 +334,6 @@ public class UserController {
         return "cart";
     }
 
-
     @PostMapping("/addtocart")
     public String addToCart(@RequestParam Long productId, Model model) {
         Product product = productService.getProductById(productId);
@@ -355,11 +347,6 @@ public class UserController {
         cartService.removeProductFromCart(productId);
         return "redirect:/user/cart";
     }
-
-
-
-
-
 
 
 
@@ -408,14 +395,6 @@ public class UserController {
 
         return "redirect:/user/address";
     }
-
-
-
-
-
-
-
-
 
 
 
